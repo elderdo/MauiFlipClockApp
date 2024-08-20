@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFlipClock.MainPage">
+
+
+    <Grid>
+        <!-- Add your flip clock UI elements here -->
+        <!-- For simplicity, let's use labels for each digit -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Top row for the word "Home" -->
+            <RowDefinition Height="Auto" />
+            <!-- Middle row for the clock digits -->
+        </Grid.RowDefinitions>
+
+
+        <!-- Middle row: Display the clock digits side by side -->
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label x:Name="Digit1" Text="0" FontSize="100" TextColor="White" />
+            <Label x:Name="Digit2" Text="0" FontSize="100" TextColor="White" />
+            <Label Text=":" FontSize="100" TextColor="White" />
+            <Label x:Name="Digit3" Text="0" FontSize="100" TextColor="White" />
+            <Label x:Name="Digit4" Text="0" FontSize="100" TextColor="White" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
