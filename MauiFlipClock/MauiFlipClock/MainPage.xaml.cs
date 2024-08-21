@@ -10,10 +10,13 @@ public partial class MainPage : ContentPage
         Device.StartTimer(TimeSpan.FromSeconds(1), () =>
         {
             var currentTime = DateTime.Now;
-            Digit1.Text = currentTime.Hour.ToString("D2")[0].ToString();
-            Digit2.Text = currentTime.Hour.ToString("D2")[1].ToString();
-            Digit3.Text = currentTime.Minute.ToString("D2")[0].ToString();
-            Digit4.Text = currentTime.Minute.ToString("D2")[1].ToString();
+            var hr = currentTime.Hour;
+            if (hr > 12) hr -= 12;
+            var minutes = currentTime.ToString("mm");
+            var amPm = currentTime.ToString("tt");
+            Hour.Text = hr.ToString();
+            Minutes.Text = minutes; 
+            AMPM.Text = amPm;
             return true;
         });
     }

@@ -9,7 +9,6 @@
         <!-- For simplicity, let's use labels for each digit -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <!-- Top row for the word "Home" -->
             <RowDefinition Height="Auto" />
             <!-- Middle row for the clock digits -->
         </Grid.RowDefinitions>
@@ -17,11 +16,11 @@
 
         <!-- Middle row: Display the clock digits side by side -->
         <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Label x:Name="Digit1" Text="0" FontSize="100" TextColor="White" />
-            <Label x:Name="Digit2" Text="0" FontSize="100" TextColor="White" />
+            <Label x:Name="Hour" Text="0" FontSize="100" TextColor="White" />
             <Label Text=":" FontSize="100" TextColor="White" />
-            <Label x:Name="Digit3" Text="0" FontSize="100" TextColor="White" />
-            <Label x:Name="Digit4" Text="0" FontSize="100" TextColor="White" />
+            <Label x:Name="Minutes" Text="0" FontSize="100" TextColor="White" />
+            <Label Text="  "  />
+            <Label x:Name="AMPM" Text="0" FontSize="100" TextColor="White" />
         </StackLayout>
     </Grid>
 
